@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff5ed">
+
+    <title>Doce Encanto | Pastelaria</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <a href="#inicio" class="logo">🍰 Doce Encanto</a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Bolinhos</a>
+            <a href="#pasteleiro">Pasteleiro</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button class="cart-btn" onclick="abrirCarrinho()">
+            🛒 <span id="cart-count">0</span>
+        </button>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <div class="container hero-content">
+
+        <div class="hero-text reveal-left">
+            <span class="tag">Feitos com amor ❤️</span>
+
+            <h1>
+                Momentos doces<br>
+                começam aqui.
+            </h1>
+
+            <p>
+                Bolinhos deliciosos, preparados com carinho
+                para tornar os teus momentos ainda mais especiais.
+            </p>
+
+            <a href="#produtos" class="btn">
+                Descobrir bolinhos →
+            </a>
+
+            <div class="hero-stats">
+                <div>
+                    <strong>100%</strong>
+                    <span>Dedicação</span>
+                </div>
+
+                <div>
+                    <strong>🍰</strong>
+                    <span>Feitos com amor</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image reveal-right">
+            <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+                alt="Bolo delicioso">
+
+            <div class="floating-card">
+                <span>❤️</span>
+                <div>
+                    <strong>Uma dose de doçura</strong>
+                    <small>Em cada encomenda</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="benefits">
+    <div class="container benefits-grid">
+
+        <div class="benefit reveal">
+            <span>🍰</span>
+            <div>
+                <strong>Qualidade</strong>
+                <p>Ingredientes selecionados</p>
+            </div>
+        </div>
+
+        <div class="benefit reveal">
+            <span>❤️</span>
+            <div>
+                <strong>Feitos com amor</strong>
+                <p>Carinho em cada detalhe</p>
+            </div>
+        </div>
+
+        <div class="benefit reveal">
+            <span>📱</span>
+            <div>
+                <strong>Encomendas fáceis</strong>
+                <p>Pedidos pelo WhatsApp</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="section products" id="produtos">
+    <div class="container">
+
+        <div class="section-title reveal">
+            <span>O nosso catálogo</span>
+            <h2>Escolhe o teu favorito</h2>
+            <p>Descobre os nossos deliciosos bolinhos.</p>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+
+    </div>
+</section>
+
+<!-- PASTELEIRO -->
+<section class="section about" id="pasteleiro">
+    <div class="container about-content">
+
+        <div class="about-image reveal-left">
+            <img src="./pasteleiro.jpg" alt="O nosso pasteleiro">
+
+            <div class="image-label">
+                <span>👨‍🍳</span>
+                <div>
+                    <strong>O nosso pasteleiro</strong>
+                    <small>Paixão pela doçura</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-text reveal-right">
+            <span class="tag">Quem está por trás dos doces</span>
+
+            <h2>
+                Cada bolinho tem uma história de amor.
+            </h2>
+
+            <p>
+                Por trás de cada doce, existe paixão,
+                dedicação e criatividade.
+            </p>
+
+            <p>
+                O nosso compromisso é preparar bolinhos
+                deliciosos que tornam cada momento especial.
+                Trabalhamos com carinho para oferecer
+                uma experiência única em cada encomenda.
+            </p>
+
+            <a href="#produtos" class="btn">
+                Fazer uma encomenda →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section contact" id="contacto">
+    <div class="container contact-box reveal">
+
+        <span>🍰</span>
+
+        <h2>Vamos tornar o teu dia mais doce?</h2>
+
+        <p>
+            Escolhe os teus bolinhos favoritos e faz
+            a tua encomenda pelo WhatsApp.
+        </p>
+
+        <button class="btn" onclick="enviarWhatsApp()">
+            Encomendar pelo WhatsApp
+        </button>
+
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+    <div class="container footer-content">
+        <h3>🍰 Doce Encanto</h3>
+        <p>Bolinhos feitos com amor.</p>
+
+        <div class="footer-links">
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Bolinhos</a>
+            <a href="#pasteleiro">Pasteleiro</a>
+        </div>
+
+        <p class="copyright">
+            © <span id="year"></span> Doce Encanto.
+            Todos os direitos reservados.
+        </p>
+    </div>
+</footer>
+
+<!-- CARRINHO -->
+<div class="overlay" id="cart-overlay">
+    <div class="cart-panel">
+
+        <div class="cart-header">
+            <h2>🛒 Meu carrinho</h2>
+            <button class="close-btn" onclick="fecharCarrinho()">✕</button>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-total">
+            <span>Total</span>
+            <strong id="cart-total">0 Kz</strong>
+        </div>
+
+        <button class="btn full" onclick="abrirFormulario()">
+            Finalizar encomenda
+        </button>
+
+    </div>
+</div>
+
+<!-- FORMULÁRIO DE ENCOMENDA -->
+<div class="overlay" id="form-overlay">
+    <div class="form-panel">
+
+        <div class="cart-header">
+            <h2>🍰 Personaliza a tua encomenda</h2>
+            <button class="close-btn" onclick="fecharFormulario()">✕</button>
+        </div>
+
+        <form id="order-form" class="order-form">
+
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" required placeholder="O teu nome">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" required placeholder="9XX XXX XXX">
+
+            <label for="endereco">Endereço de entrega</label>
+            <input type="text" id="endereco" required placeholder="Bairro, rua...">
+
+            <label for="tipo-doce">O que pretendes encomendar?</label>
+            <select id="tipo-doce" required>
+                <option value="">Escolhe uma opção</option>
+                <option value="Bolo">Bolo</option>
+                <option value="Bolinhos">Bolinhos</option>
+                <option value="Cupcakes">Cupcakes</option>
+                <option value="Donuts">Donuts</option>
+                <option value="Salgados">Salgados</option>
+                <option value="Doces personalizados">Doces personalizados</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <label for="descricao">Descreve o que desejas</label>
+            <textarea id="descricao" rows="4"
+                placeholder="Ex.: bolo de aniversário, decoração azul, com nome e idade..."></textarea>
+
+            <label for="sabor">Sabor ou recheio</label>
+            <input type="text" id="sabor" placeholder="Ex.: chocolate, morango, baunilha...">
+
+            <label for="quantidade">Quantidade</label>
+            <input type="number" id="quantidade" min="1" value="1" required>
+
+            <label for="data-entrega">Data desejada para entrega</label>
+            <input type="date" id="data-entrega">
+
+            <label for="observacoes">Outras informações</label>
+            <textarea id="observacoes" rows="3"
+                placeholder="Tamanho, decoração, orçamento ou outros detalhes..."></textarea>
+
+            <button type="submit" class="btn full">
+                Enviar encomenda pelo WhatsApp
+            </button>
+
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
