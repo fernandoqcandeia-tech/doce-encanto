@@ -14,21 +14,21 @@ const products = [
         id: 1,
         name: "Bolo de Chocolate",
         description: "Bolo macio com cobertura de chocolate.",
-        price: 8000,
+        price: 18000,
         image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
     },
     {
         id: 2,
         name: "Cupcakes",
         description: "Deliciosos cupcakes decorados.",
-        price: 1500,
+        price: 8000,
         image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=600&q=80"
     },
     {
         id: 3,
         name: "Bolo de Morango",
         description: "Bolo especial com sabor a morango.",
-        price: 10000,
+        price: 20000,
         image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80"
     },
 
@@ -36,14 +36,14 @@ const products = [
         id: 5,
         name: "Bolo de Aniversário",
         description: "Bolo personalizado para momentos especiais.",
-        price: 15000,
+        price: 32000,
         image: "https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=600&q=80"
     },
     {
         id: 6,
         name: "Bolinhos Caseiros",
         description: "Bolinhos frescos feitos com carinho.",
-        price: 5000,
+        price: 8000,
         image: "https://images.unsplash.com/photo-1603532648955-039310d9ed75?auto=format&fit=crop&w=600&q=80"
     }
 ];
